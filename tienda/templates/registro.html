@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% extends 'base.html' %}
+	{% block titulo %}
+	    Registrar Usuario
+	{% endblock %}
+
+	{% block contenido %}
+	    <h2>{{ msj }}</h2>
+	    <form action="" method="POST">
+	    	{% csrf_token %}
+	    	{{ formulario.as_p }}
+	    	<input type="submit" value="Registrarse">
+	    </form>
+	{% endblock %}
+
+
+</body>
+</html>
